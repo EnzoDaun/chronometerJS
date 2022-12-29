@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap");
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(to right, #232526, #414345);
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: normal;
+}
+
+.chronometer-display {
+  font-family: monospace;
+  justify-content: center;
+  display: flex;
+  height: inherit;
+  align-items: center;
+  font-size: 48px;
+  color: #f8f8ff;
+}
+
+.chronometer {
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  width: 280px;
+  height: 280px;
+}
+
+.chronometer:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  padding: 8px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #009fff, #ec2f4b);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.chronometer-buttons {
+  display: flex;
+  justify-content: center;
+  padding-top: 28px;
+  gap: 20px;
+}
+
+.chronometer-buttons button {
+  cursor: pointer;
+  font-size: 1.8rem;
+  border-radius: 12px;
+  outline: none;
+  background-color: transparent;
+}
+
+.chronometer-buttons .start-button {
+  color: #00bfaf;
+  border: 1px solid #00bfaf;
+}
+
+.chronometer-buttons .start-button:hover {
+  background-color: #00bfaf;
+  color: white;
+}
+
+.chronometer-buttons .stop-button {
+  color: #ff598f;
+  border: 1px solid #ff598f;
+}
+
+.chronometer-buttons .stop-button:hover {
+  background-color: #ff598f;
+  color: white;
+}
+
+.chronometer-buttons .reset-button {
+  color: #e0e300;
+  border: 1px solid #e0e300;
+}
+
+.chronometer-buttons .reset-button:hover {
+  background-color: #e0e300;
+  color: white;
+}
